@@ -2,6 +2,10 @@ version: "3"
 
 services:
 
+    # auth-svc:
+    #     restart: on-failure
+    #     build: ./auth
+
     data-svc:
         restart: on-failure
         build: ./data
@@ -14,12 +18,31 @@ services:
         restart: on-failure
         build: ./wsgi
 
+    cadvisor-svc:
+        extends:
+            file: dash/docker-compose.yml
+            service: cadvisor-svc
+
+    prometheus-svc:
+        extends:
+            file: dash/docker-compose.yml
+            service: prometheus-svc
+
+    grafana-svc:
+        extends:
+            file: dash/docker-compose.yml
+            service: grafana-svc
+
     nrp-svc:
         restart: on-failure
         build: ./nrp
         ports:
-            - 80:80
+          - 80:80
         depends_on:
-            - data-svc
-            - user-svc
-            - wsgi-svc
+        #   - auth-svc
+          - data-svc
+          - user-svc
+          - wsgi-svc
+          - grafana-svc
+          - prometheus-svc
+          - cadvisor-svc

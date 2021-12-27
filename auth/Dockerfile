@@ -1,0 +1,4 @@
+FROM jboss/keycloak
+ENV KEYCLOAK_USER admin
+ENV KEYCLOAK_PASSWORD theboss
+EXPOSE 8080

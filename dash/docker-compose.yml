@@ -1,0 +1,22 @@
+version: "3.3"
+
+services:
+
+  cadvisor-svc:
+    build: ./cadvisor
+    volumes:
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker:/var/lib/docker:ro
+    ports:
+      - 8080:8080
+
+  prometheus-svc:
+    build: ./prometheus
+    ports:
+      - 9090:9090
+
+  grafana-svc:
+    build: ./grafana
+    ports:
+      - 3000:3000

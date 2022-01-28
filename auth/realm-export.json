@@ -1,6 +1,6 @@
 {
-  "id": "restybox",
-  "realm": "restybox-realm",
+  "id": "dyce",
+  "realm": "dyce-realm",
   "notBefore": 0,
   "defaultSignatureAlgorithm": "RS256",
   "revokeRefreshToken": false,
@@ -51,7 +51,7 @@
         "description": "${role_offline-access}",
         "composite": false,
         "clientRole": false,
-        "containerId": "restybox",
+        "containerId": "dyce",
         "attributes": {}
       },
       {
@@ -60,12 +60,12 @@
         "description": "${role_uma_authorization}",
         "composite": false,
         "clientRole": false,
-        "containerId": "restybox",
+        "containerId": "dyce",
         "attributes": {}
       },
       {
         "id": "9df03cb5-804a-4f41-b9a8-0fb09f2d9487",
-        "name": "default-roles-restybox",
+        "name": "default-roles-dyce",
         "description": "${role_default-roles}",
         "composite": true,
         "composites": {
@@ -81,7 +81,7 @@
           }
         },
         "clientRole": false,
-        "containerId": "restybox",
+        "containerId": "dyce",
         "attributes": {}
       }
     ],
@@ -300,7 +300,7 @@
       ],
       "security-admin-console": [],
       "admin-cli": [],
-      "restybox-client": [],
+      "dyce-client": [],
       "account-console": [],
       "broker": [
         {
@@ -397,11 +397,11 @@
   "groups": [
     {
       "id": "9eb50997-9808-4d96-bbb3-c00a6a9caa43",
-      "name": "restybox-group",
-      "path": "/restybox-group",
+      "name": "dyce-group",
+      "path": "/dyce-group",
       "attributes": {},
       "realmRoles": [
-        "default-roles-restybox"
+        "default-roles-dyce"
       ],
       "clientRoles": {},
       "subGroups": []
@@ -409,11 +409,11 @@
   ],
   "defaultRole": {
     "id": "9df03cb5-804a-4f41-b9a8-0fb09f2d9487",
-    "name": "default-roles-restybox",
+    "name": "default-roles-dyce",
     "description": "${role_default-roles}",
     "composite": true,
     "clientRole": false,
-    "containerId": "restybox"
+    "containerId": "dyce"
   },
   "requiredCredentials": [
     "password"
@@ -476,13 +476,13 @@
       "clientId": "account",
       "name": "${client_account}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/restybox-realm/account/",
+      "baseUrl": "/realms/dyce-realm/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/realms/restybox-realm/account/*"
+        "/realms/dyce-realm/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -517,13 +517,13 @@
       "clientId": "account-console",
       "name": "${client_account-console}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/restybox/account/",
+      "baseUrl": "/realms/dyce/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/realms/restybox/account/*"
+        "/realms/dyce/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -678,7 +678,7 @@
     },
     {
       "id": "43e905b4-5ac4-40ef-869c-b6e998b66d02",
-      "clientId": "restybox-client",
+      "clientId": "dyce-client",
       "rootUrl": "http://localhost",
       "adminUrl": "http://localhost",
       "surrogateAuthRequired": false,
@@ -747,13 +747,13 @@
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
       "rootUrl": "${authAdminUrl}",
-      "baseUrl": "/admin/restybox-realm/console/",
+      "baseUrl": "/admin/dyce-realm/console/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/admin/restybox-realm/console/*"
+        "/admin/dyce-realm/console/*"
       ],
       "webOrigins": [
         "+"

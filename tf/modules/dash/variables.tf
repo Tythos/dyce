@@ -4,3 +4,9 @@ variable "grafana-svc-name" {}
 variable "cadvisor-img-name" {}
 variable "prometheus-img-name" {}
 variable "grafana-img-name" {}
+variable cadvisor-external-port {}
+variable cadvisor-internal-port {}
+variable prometheus-external-port {}
+variable prometheus-internal-port {}
+variable grafana-external-port {}
+variable grafana-internal-port {}

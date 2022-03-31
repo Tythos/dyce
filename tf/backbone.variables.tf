@@ -21,22 +21,22 @@ variable "wsgi-svc-name" {
 
 # service names
 variable "auth-img-name" {
-  default = "dyce-main_auth-svc"
+  default = "dyce-main_auth-svc:1.0.0"
   type = string
 }
 
 variable "data-img-name" {
-  default = "dyce-main_data-svc"
+  default = "dyce-main_data-svc:latest"
   type = string
 }
 
 variable "user-img-name" {
-  default = "dyce-main_user-svc"
+  default = "dyce-main_user-svc:1.0.0"
   type = string
 }
 
 variable "wsgi-img-name" {
-  default = "dyce-main_wsgi-svc"
+  default = "dyce-main_wsgi-svc:1.0.0"
   type = string
 }
 

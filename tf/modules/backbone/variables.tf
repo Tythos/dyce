@@ -1,0 +1,10 @@
+variable "auth-svc-name" {}
+variable "data-svc-name" {}
+variable "user-svc-name" {}
+variable "wsgi-svc-name" {}
+variable "auth-img-name" {}
+variable "data-img-name" {}
+variable "user-img-name" {}
+variable "wsgi-img-name" {}
+variable "auth-ext-port" {}
+variable "auth-int-port" {}
